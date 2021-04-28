@@ -4,12 +4,14 @@
     <head></head>
     <body>
         <h1>Todos</h1>
-        <input id="search-text" type="text" placeholder="Filter todos">
+        <input type="text" id="search" placeholder="Filter To-Do's">
+        <button id="add-todo">Add To-Do</button>
+        <button id="delete">Delete All</button>
         <div id="todos"></div>
-        <form id="new-todo">
-            <input type="text" placeholder="Something to do" name="text">
-            <button>Add Todo</button>
+        <form action="" id="note-form">
+            <input type="text" name="title" id="note-title">
+            <button name="submit">Add Note</button>
         </form>
-        <script src="todo-app.js"></script>
+        <script src="todo.js"></script>
     </body>
 </html>
