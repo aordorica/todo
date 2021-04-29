@@ -53,13 +53,13 @@ const renderTodos = function(todoList, filterList) {
 
 renderTodos(todos, filters)
 
-//Evet Listeners
+//Search Event Listener
 document.querySelector("#search").addEventListener("input", function (e) {
   filters.searchText = e.target.value;
   renderTodos(todos, filters);
 });
 
-//Create New Note functionality form
+//Create New Note form --> Not in final version
 document.querySelector('#note-form').addEventListener('submit', function(e) {
   e.preventDefault()
   todos.push({
@@ -67,15 +67,7 @@ document.querySelector('#note-form').addEventListener('submit', function(e) {
     completed: false,
   });
   renderTodos(todos, filters);
-  e.target.elements.text.value = "";
-})
-
-//Add new Note
-document.querySelector('#add-todo').addEventListener('click', function(e) {
-  const tempTodo = document.createElement('p')
-  tempTodo.textContent = 'New To-Do'
-  tempTodo.className = 'todo'
-  document.querySelector('#todos').appendChild(tempTodo)
+  e.target.elements.text.value = ''
 })
 
 //Delete all Todo's
